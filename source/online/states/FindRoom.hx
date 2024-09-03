@@ -44,7 +44,7 @@ class FindRoom extends MusicBeatState {
 		add(swagRooms);
 		curSelected = 0;
 
-		noRoomsText = new FlxText(0, 0, 0, "(No rooms found! Refresh the list using " + #if mobileC "C)" #else "R)" #end);
+		noRoomsText = new FlxText(0, 0, 0, "(The rooms Not found! Refresh the list using " + #if mobileC "C)" #else "R)" #end);
 		noRoomsText.setFormat("VCR OSD Mono", 25, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		noRoomsText.screenCenter(XY);
 		noRoomsText.scrollFactor.set(0, 0);
@@ -113,7 +113,7 @@ class FindRoom extends MusicBeatState {
                 if (err != null) {
 					FlxG.switchState(new Lobby());
 					FlxG.sound.play(Paths.sound('cancelMenu'));
-					Alert.alert("Couldn't connect!", "ERROR: " + err.code + " - " + err.message + (err.code == 0 ? "\nTry again in a few minutes! The server is probably restarting!" : ""));
+					Alert.alert("Couldn't connect The Server Have Internet!", "ERROR: " + err.code + " - " + err.message + (err.code == 0 ? "\nTry again in a few minutes! The server is probably restarting!" : ""));
                     return;
                 }
 
